@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page | Cama Coffee</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="./images/coffee-cup.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- cdnjs font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- header block -->
+    <header class="header-container clearfix">
+        <h1 class="col-3-header float-left clearfix">
+            <img src="./images/logo.png" class="w-logo float-left" alt="logo">
+            <a href="./index.html" class="float-left">Cama Coffee</a>
+        </h1>
+        <nav class="col-3-header float-left">
+            <ul class="clearfix">
+                <li class="float-left"><a href="about.html">關於我們</a></li>
+                <li class="float-left"><a href="product.html">商品列表</a></li>
+                <li class="float-left"><a href="store.html">門市資訊</a></li>
+                <li class="float-left"><a href="contact.html">聯絡我們</a></li>
+            </ul>
+        </nav>
+        <div class="col-3-header float-left clearfix">
+            <div class="social-icon">
+                <a class="float-left" href="https://www.facebook.com/camacafe/" target="_blank"><i-facebook
+                        class="fa-brands fa-facebook"></i-facebook></a>
+                <a class="float-left" href="https://www.instagram.com/camacafe_tw/" target="_blank"><i-instagram
+                        class="fa-brands fa-instagram"></i-instagram></a>
+                <a class="float-left" href="https://www.youtube.com/channel/UCQQU984-ZStyys9bv9Sh09g"
+                    target="_blank"><i-youtube class="fa-brands fa-youtube"></i-youtube></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="bg-light">
+        <div class="container">
+            <ol class="breadcrumb clearfix">
+                <li class="float-left"><a href="index.html">首頁</a></li>
+                <li class="float-left">聯絡我們</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- container start -->
+    <!-- .container.clearfix>.float-left.col-3{左}+.float-left.col-9{右} -->
+    <div class="container clearfix position-relative">
+        <h2 class="float-left col-12">聯絡我們</h2>
+
+        <div class="float-left col-3 position-sticky">
+            <ul class="sidebar">
+                <li><a href="#" class="active">聯絡表單</a></li>
+                <li><a href="#">總店資訊</a></li>
+            </ul>
+        </div>
+
+        <div class="float-left col-8">
+
+            <!-- 表單開始 -->
+            <form id="myForm" action="" method="POST" enctype="multipart/form-data" autocomplete="off">
+
+                <!-- 姓名開始 -->
+                <label class="label-control" for="username">姓名</label>
+                <input type="text" name="username" id="username" placeholder="請輸入姓名">
+                <br />
+                <!-- 姓名結束 -->
+
+                <!-- 電話開始 -->
+                <label class="label-control" for="phone">電話</label>
+                <input type="text" name="phone" id="phone" placeholder="請輸入電話" required>
+                <br />
+                <!-- 電話結束 -->
+
+                <!-- 生日開始 -->
+                <label class="label-control" for="birthday">生日</label>
+                <input type="date" name="birthday" id="birthday">
+                <br />
+                <!-- 生日結束 -->
+
+                <!-- 電子郵件開始 -->
+                <label class="label-control" for="email">電子郵件</label>
+                <input type="email" name="email" id="email" placeholder="請輸入電子郵件" required>
+                <br />
+                <!-- 電子郵件結束 -->
+
+                <!-- 密碼開始 -->
+                <label class="label-control" for="password">密碼</label>
+                <input type="password" name="password" id="password" placeholder="請輸入密碼">
+                <br />
+                <!-- 密碼結束 -->
+
+                <!-- 填寫日期開始 -->
+                <label class="label-control" for="dateField">當前填寫日期：</label>
+                <input type="text" id="dateField" name="dateField" readonly>
+                <br />
+                <!-- 填寫日期結束 -->
+
+                <!-- 聯絡目的開始 -->
+                <label class="label-control" for="purpose">聯絡目的</label>
+                <select name="purpose" id="purpose">
+                    <option disabled selected="true">==請選擇項目==</option>
+                    <option value="1">客服專區</option>
+                    <option value="2">海外代理</option>
+                    <option value="3">加盟專區</option>
+                    <option value="4">異業合作</option>
+                    <option value="5">企業採購</option>
+                    <option value="6">聯名商品</option>
+                </select>
+                <br />
+                <!-- 聯絡目的結束 -->
+
+                <!-- 單選區塊開始 -->
+                <label class="label-control" for="gender">稱謂</label>
+                <input class="mb-2" type="radio" name="gender" id="male" value="male" checked><label
+                    class="label-control" for="male">先生</label>
+                <input class="mb-2" type="radio" name="gender" id="female" value="female"><label class="label-control"
+                    for="female">小姐</label>
+                <br />
+
+                <label class="label-control" for="check">是否同意使用個人資料</label>
+                <input class="mb-2" type="radio" name="check" id="yes" value="yes" checked><label class="label-control"
+                    for="yes">是</label>
+                <input class="mb-2" type="radio" name="check" id="no" value="no"><label class="label-control"
+                    for="no">否</label>
+                <br />
+                <!-- 單選區塊結束 -->
+
+                <!-- 多選區塊開始 -->
+                <label class="label-control" for="interest">對那些項目有興趣</label>
+                <input class="mb-2" type="checkbox" name="interest[]" id="art"><label class="label-control"
+                    for="art">藝術</label>
+                <input class="mb-2" type="checkbox" name="interest[]" id="sport"><label class="label-control"
+                    for="sport">運動</label>
+                <input class="mb-2" type="checkbox" name="interest[]" id="music"><label class="label-control"
+                    for="music">音樂</label>
+                <input class="mb-2" type="checkbox" name="interest[]" id="programm"><label class="label-control"
+                    for="programm">程式設計</label>
+                <input class="mb-2" type="checkbox" name="interest[]" id="writing"><label class="label-control"
+                    for="writing">寫作</label>
+                <br />
+                <!-- 多選區塊結束 -->
+
+                <!-- 上傳檔案區塊開始 -->
+                <label class="label-control" for="file">上傳附件</label>
+                <input type="file" name="file" id="file">
+                <br />
+                <!-- 上傳檔案區塊結束 -->
+
+                <!-- 內容區塊開始 -->
+                <label class="label-control" for="message">描述內容</label><br />
+                <textarea name="message" id="message" cols="30" rows="15" placeholder="請描述內容"></textarea>
+                <br />
+                <!-- 內容區塊結束 -->
+
+                <!-- 多選區塊開始 -->
+                <input class="mb-3" type="checkbox" name="newsletter" id="newsletter" checked><label
+                    class="label-control" for="newsletter">是否同意訂閱電子報</label>
+                <br />
+                <!-- 多選區塊結束 -->
+
+                <p class="text-left">
+                    <!-- 重設表單開始 -->
+                    <input type="reset" value="重設表單" onclick="handleReset(event)">
+                    <!-- 重設表單結束 -->
+                    <!-- 送出表單開始 -->
+                    <input type="submit" value="送出表單">
+                    <br />
+                    <!-- 送出表單結束 -->
+                </p>
+
+            </form>
+            <!-- 表單結束 -->
+        </div>
+    </div>
+
+    <p class="container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.84868815489!2d121.54789207585596!3d25.039208577813067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abcf913891b1%3A0x7bc4a1ca061f4921!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5a6J5ZKM6Lev5LiA5q61MjfomZ8xOA!5e0!3m2!1szh-TW!2stw!4v1709261701356!5m2!1szh-TW!2stw"
+            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </p>
+    <!-- container end -->
+
+    <!-- pagetop btn -->
+    <a href="#" id="pagetop">TOP</a>
+
+    <!-- footer block -->
+    <footer>
+        <div class="container">
+            <p>
+                網站僅供練習，不作為商業用途<br>
+                copyright &copy &nbsp; Cama Coffee. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+
+<script>
+    window.onload = () => {
+        setInitialDate();
+    }
+    function setInitialDate() {
+        var currentDate = new Date();
+        var dateString = currentDate.getFullYear() + '-' + addLeadingZero((currentDate.getMonth() + 1)) + '-' + addLeadingZero(currentDate.getDate());
+        // console.log('Setting date:', dateString);
+        var currentDateElement = document.getElementById('dateField');
+        // console.log("currentDateElement:", currentDateElement);
+        if (currentDateElement) {
+            currentDateElement.value = dateString;
+        }
+    }
+    function addLeadingZero(number) {
+        return number < 10 ? '0' + number : number;
+    }
+    function handleReset(event) {
+        // 在表單重設之後，表單中的所有輸入字段都會被重設為它們的初始值，這包括dateField。因此，您的腳本設置了日期字段的值，但表單重設操作將其重設為空。
+        console.log(event);
+        event.preventDefault(); // 阻止表單重設的默認行為
+        var dateField = document.getElementById('dateField');
+        // console.log("dateField:", dateField);
+        var currentDate = dateField.value;
+        // console.log("currentDate:", currentDate);
+        document.getElementById('myForm').reset();
+        // console.log("---after reset---");
+        // console.log("dateField:", dateField);
+        dateField.value = currentDate;
+        // console.log("dateField.value:", dateField.value);
+    }
+
+</script>
+
+
+</html>

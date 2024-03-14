@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Form with Date</title>
+    <script>
+        window.onload = () => {
+            setInitialDate();
+        }
+        function setInitialDate() {
+            var currentDate = new Date();
+            var dateString = currentDate.getFullYear() + '-' + addLeadingZero((currentDate.getMonth() + 1)) + '-' + addLeadingZero(currentDate.getDate());
+            // console.log('Setting date:', dateString);
+            var currentDateElement = document.getElementById('dateField');
+            // console.log("currentDateElement:", currentDateElement);
+            if (currentDateElement) {
+                currentDateElement.value = dateString;
+            }
+        }
+        function addLeadingZero(number) {
+            return number < 10 ? '0' + number : number;
+        }
+        function handleReset(event) {
+            // 在表單重設之後，表單中的所有輸入字段都會被重設為它們的初始值，這包括dateField。因此，您的腳本設置了日期字段的值，但表單重設操作將其重設為空。
+            console.log(event);
+            event.preventDefault(); // 阻止表單重設的默認行為
+            var dateField = document.getElementById('dateField');
+            // console.log("dateField:", dateField);
+            var currentDate = dateField.value;
+            // console.log("currentDate:", currentDate);
+            document.getElementById('myForm').reset();
+            // console.log("---after reset---");
+            // console.log("dateField:", dateField);
+            dateField.value = currentDate;
+            // console.log("dateField.value:", dateField.value);
+        }
+
+    </script>
+</head>
+
+<body>
+    <form action="" id="myForm">
+        <label for="dateField">Date:</label>
+        <input type="text" id="dateField" name="dateField" readonly>
+        <input type="reset" value="Reset" onclick="handleReset(event)">
+    </form>
+</body>
+
+</html>

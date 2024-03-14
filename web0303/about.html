@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page | Cama Coffee</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="./images/coffee-cup.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- cdnjs font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- header block -->
+    <header class="header-container clearfix">
+        <h1 class="col-3-header float-left clearfix">
+            <img src="./images/logo.png" class="w-logo float-left" alt="logo">
+            <a href="./index.html" class="float-left">Cama Coffee</a>
+        </h1>
+        <nav class="col-3-header float-left">
+            <ul class="clearfix">
+                <li class="float-left"><a href="about.html">關於我們</a></li>
+                <li class="float-left"><a href="product.html">商品列表</a></li>
+                <li class="float-left"><a href="store.html">門市資訊</a></li>
+                <li class="float-left"><a href="contact.html">聯絡我們</a></li>
+            </ul>
+        </nav>
+        <div class="col-3-header float-left clearfix">
+            <div class="social-icon">
+                <a class="float-left" href="https://www.facebook.com/camacafe/" target="_blank"><i-facebook
+                        class="fa-brands fa-facebook"></i-facebook></a>
+                <a class="float-left" href="https://www.instagram.com/camacafe_tw/" target="_blank"><i-instagram
+                        class="fa-brands fa-instagram"></i-instagram></a>
+                <a class="float-left" href="https://www.youtube.com/channel/UCQQU984-ZStyys9bv9Sh09g"
+                    target="_blank"><i-youtube class="fa-brands fa-youtube"></i-youtube></a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- 麵包屑的有序排列 -->
+    <!-- .bg-light>.container>ol.breadcrumb.clearfix>li.float-left>a[href="index.html"]{首頁}^li.float-left{關於我們} -->
+    <div class="bg-light">
+        <div class="container">
+            <ol class="breadcrumb clearfix">
+                <li class="float-left"><a href="index.html">首頁</a></li>
+                <li class="float-left">關於我們</li>
+            </ol>
+        </div>
+    </div>
+    <!-- container start -->
+    <!-- .container.clearfix>.float-left.col-3{左}+.float-left.col-9{右} -->
+    <div class="container clearfix position-relative">
+        <h2 class="float-left col-12">關於我們</h2>
+        <div class="float-left col-3 position-sticky">
+            <!-- ul.sidebar>li*3>a[href="#"]{item$$} -->
+            <ul class="sidebar">
+                <li><a class="active" href="#">關於咖瑪</a></li>
+                <li><a href="#">品牌故事</a></li>
+                <li><a href="#">歷史沿革</a></li>
+            </ul>
+        </div>
+        <div class="float-left col-9">
+            <img class="w-100" src="https://placehold.co/600x400" alt="about-img">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste minima maxime dolor beatae recusandae
+                quaerat vel impedit deserunt, enim sequi ducimus voluptatem error totam ex nam, placeat in, aut quidem.
+            </p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, totam. Quidem ducimus aspernatur placeat
+                quas rerum magnam soluta molestias odio architecto? Dolores tempore impedit ea ex, adipisci cumque
+                perspiciatis voluptate.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, doloremque culpa illo officiis quod
+                recusandae corporis a veniam consectetur ullam? Placeat, nisi rerum voluptas veritatis quod doloribus
+                incidunt architecto dolorem.</p>
+            <img class="w-100" src="https://placehold.co/600x400" alt="about-img">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste minima maxime dolor beatae recusandae
+                quaerat vel impedit deserunt, enim sequi ducimus voluptatem error totam ex nam, placeat in, aut quidem.
+            </p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, totam. Quidem ducimus aspernatur placeat
+                quas rerum magnam soluta molestias odio architecto? Dolores tempore impedit ea ex, adipisci cumque
+                perspiciatis voluptate.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, doloremque culpa illo officiis quod
+                recusandae corporis a veniam consectetur ullam? Placeat, nisi rerum voluptas veritatis quod doloribus
+                incidunt architecto dolorem.</p>
+        </div>
+    </div>
+
+    <!-- pagetop btn -->
+    <a href="#" id="pagetop">TOP</a>
+
+    <!-- footer block -->
+    <footer>
+        <div class="container">
+            <p>
+                網站僅供練習，不作為商業用途<br>
+                copyright &copy &nbsp; Cama Coffee. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
