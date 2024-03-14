@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./_css/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="swiper_zoomed.css"> -->
+    <style>
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 24px;
+            transition: transform 0.3s;
+        }
+
+        .swiper-slide.zoomed {
+            transform: scale(2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <img src="https://placehold.co/150x150" alt="150" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <img src="https://placehold.co/150x150" alt="150" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <img src="https://placehold.co/150x150" alt="150" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <img src="https://placehold.co/150x150" alt="150" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <img src="https://placehold.co/150x150" alt="150" class="card-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            centeredSlides: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                slideChangeTransitionStart: function () {
+                    // Remove zoomed class from all slides
+                    document.querySelectorAll('.swiper-slide').forEach(function (slide) {
+                        slide.classList.remove('zoomed');
+                    });
+
+                    // Add zoomed class to the active slide
+                    document.querySelector('.swiper-slide-active').classList.add('zoomed');
+                },
+            },
+        });
+    </script>
+
+</body>
+
+</html>

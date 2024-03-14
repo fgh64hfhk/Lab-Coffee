@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow Page</title>
+    <!-- <link rel="stylesheet" href="./_css/bootstrap.css">
+    <script src="./_js/bootstrap.bundle.js"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="slideshow.css">
+</head>
+
+<body>
+    <h1>投影片練習</h1>
+    <p>
+        <a href="https://www.youtube.com/watch?v=qOO6lVMhmGc">How to make Responsive Card Slider in HTML CSS &
+            JavaScript | SwiperJs</a>
+    </p>
+
+    <hr>
+
+    <!-- slideshow-container -->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="./_images/img_nature_wide.jpg" alt="nature_wide" class="w-100">
+            <div class="text">Caption One</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="./_images/img_mountains_wide.jpg" alt="mountains_wide" class="w-100">
+            <div class="text">Caption Two</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="./_images/img_snow_wide.jpg" alt="snow_wide" class="w-100">
+            <div class="text">Caption Three</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="./_images/img_lights_wide.jpg" alt="lights_wide" class="w-100">
+            <div class="text">Caption Four</div>
+        </div>
+        <div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- dot block -->
+    <div class="dot-block">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <script>
+        // 預設投影片的索引值
+        let slideIndex = 1;
+        // 進入畫面時的預設投影片
+        showSlides(slideIndex);
+        // 設定下一張投影片的方法
+        // 設定上一張投影片的方法
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides(slideIndex);
+        }
+        // 設定選擇點的方法
+        function currentSlide(n) {
+            slideIndex = n;
+            showSlides(slideIndex);
+        }
+        // 設定顯示投影片的方法
+        function showSlides(n) {
+            // 1. 宣告區域變數
+            let i;
+
+            // 2. 宣告投影片
+            let slides = window.document.getElementsByClassName("mySlides");
+
+            // 2. 宣告選擇點
+            let dots = window.document.getElementsByClassName("dot")
+
+            // 3. 設定讀取投影片的檢查條件
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            // 4. 這是一個迴圈，將所有輪播元素的顯示設置為"none"，隱藏它們。
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // 5. 這也是一個迴圈，移除所有指示點（dots）的"active"類別，將它們設置為非活動狀態。
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            // 6. 顯示指定索引的輪播元素，將其顯示設置為"block"。
+            slides[slideIndex - 1].style.display = "block";
+            // 7. 將指定索引的指示點標記為活動狀態，添加"active"類別。
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+</body>
+
+</html>

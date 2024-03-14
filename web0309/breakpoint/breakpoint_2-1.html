@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="breakpoint.css">
+    <style>
+        @media (min-width: 992px) {
+            .fixed-column {
+                background-color: #f8f9fa;
+                width: 300px;
+                position: fixed;
+                height: 100%;
+            }
+
+            .fluid-column {
+                margin-left: 300px;
+                padding: 20px;
+            }
+        }
+    </style>
+    <title>Two Column Layout</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col fixed-column">
+                <nav class="navbar navbar-light bg-light">
+                    <a class="navbar-brand" href="#">Fixed Column</a>
+                </nav>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Link 1</a>
+                    <a href="#" class="list-group-item list-group-item-action">Link 2</a>
+                    <a href="#" class="list-group-item list-group-item-action">Link 3</a>
+                </div>
+            </div>
+            <div class="col fluid-column bg-info">
+                <h2>Main Content</h2>
+                <p>This is the fluid column that adjusts its width based on the screen size. On smaller screens, it
+                    takes up the full width, and on larger screens, it stays to the right of the fixed column.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

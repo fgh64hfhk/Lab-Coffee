@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* CSS Document */
+html {
+	scroll-behavior: smooth;
+}
+
+#cover {
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, .3)), color-stop(75%, rgba(22, 22, 22, .7)), to(#161616)), url("../img/hp_life_blog.jpg");
+	background: linear-gradient(to bottom, rgba(22, 22, 22, .3) 0, rgba(22, 22, 22, .7) 75%, #161616 100%), url("../img/hp_life_blog.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+}
+
+#wind_cover{
+	background-image:url(../img/wind_cover.jpg);
+}
+
+#sleep_cover{
+	background-image:url(../img/sleep_cover.jpg);
+}
+
+#spice_cover{
+	background-image:url(../img/spice_cover.jpg);
+}
+
+#snow_cover{
+	background-image: url("../img/snow_cover.jpg");
+}
+
+#eat_cover{
+	background-image: url("../img/eat_cover.jpg");
+}
+
+#farming_cover{
+	background-image: url("../img/farming_cover.jpg");
+}

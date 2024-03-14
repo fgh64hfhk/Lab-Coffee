@@ -1,0 +1,219 @@
+@charset "UTF-8";
+/* CSS Document */
+html {
+	scroll-behavior: smooth;
+}
+.kitchen-cover1 {
+	background-image: url("../img/p_kitchen-cover-1.jpeg");
+}
+.kitchen-cover2 {
+	background-image: url("../img/p_kitchen-cover-2.jpeg");
+}
+.kitchen-cover3 {
+	background-image: url("../img/p_kitchen-cover-3.jpeg");
+}
+.kitchen-cover4 {
+	background-image: url("../img/p_kitchen-cover-4.jpeg");
+}
+#kitchentitle {
+	color: black;
+	font-size: 2.5em;
+}
+/*
+.bg-slant-white {
+  position: relative;
+}
+
+.bg-slant-white:after {
+  z-index: 1;
+  background: #fff;
+  content: "";
+  -webkit-transform: rotate(-5deg) translateX(-50%);
+  -ms-transform: rotate(-5deg) translateX(-50%);
+  transform: rotate(-5deg) translateX(-50%);
+  width: 120%;
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  left: 50%;
+}
+
+.bg-slant-white.bg-light:after {
+  background: #f8f9fa;
+}
+*/
+/*css for images under "Find your best food" */
+#white-box {
+	background: hsla(0, 0%, 100%, .5);
+/*
+	-moz-box-shadow: 1px 1px 4px 4px #888888;
+	-webkit-box-shadow: 1px 1px 4px 4px #888888;
+	box-shadow: 1px 1px 4px 4px #888888;
+*/
+	-moz-border-radius: 5%; /*For older Browser*/
+	-webkit-border-radius: 5%;/*For older Browser*/
+	border-radius: 5%; /*supported by all latest Browser*/
+}
+.ftco-46 .ftco-46-row > div {
+	text-align: center;
+	width: 100%;
+}
+@media (min-width: 992px) {
+	.ftco-46 .ftco-46-row > div {
+		width: 33.33333%;
+	}
+}
+.ftco-46 .ftco-46-subheading {
+	font-size: 14px;
+	color: #b3b3b3;
+	color: #ff7a5c;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+}
+.ftco-46 .ftco-46-heading {
+	text-transform: uppercase;
+	line-height: 1.5;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+.ftco-46 .ftco-46-image {
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+}
+.ftco-46 .ftco-46-image:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #000;
+	opacity: .05;
+}
+@media (max-width: 991.98px) {
+	.ftco-46 .ftco-46-image {
+		height: 600px;
+	}
+}
+.ftco-46 .ftco-46-text {
+	padding: 40px;
+	background: #fff;
+}
+@media (max-width: 991.98px) {
+	.ftco-46 .ftco-46-text {
+		margin-bottom: 20px;
+	}
+}
+.ftco-46 .ftco-46-text.ftco-46-arrow-up {
+	z-index: 2;
+	position: relative;
+}
+.ftco-46 .ftco-46-text.ftco-46-arrow-up:after {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-bottom-color: #fff;
+	border-width: 20px;
+	margin-left: -20px;
+}
+@media (max-width: 991.98px) {
+	.ftco-46 .ftco-46-text.ftco-46-arrow-up:after {
+		display: none;
+	}
+}
+.ftco-46 .ftco-46-text.ftco-46-arrow-left {
+	z-index: 2;
+	position: relative;
+}
+.ftco-46 .ftco-46-text.ftco-46-arrow-left:after {
+	right: 100%;
+	top: 20%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	border-right-color: #fff;
+	border-width: 20px;
+	margin-top: -20px;
+}
+@media (max-width: 991.98px) {
+	.ftco-46 .ftco-46-text.ftco-46-arrow-left:after {
+		display: none;
+	}
+}
+.ftco-46 .ftco-46-text.ftco-46-arrow-right {
+	z-index: 2;
+	position: relative;
+}
+.ftco-46 .ftco-46-text.ftco-46-arrow-right:after {
+	left: 100%;
+	top: 20%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-left-color: #fff;
+	border-width: 20px;
+	margin-top: -20px;
+}
+@media (max-width: 991.98px) {
+	.ftco-46 .ftco-46-text.ftco-46-arrow-right:after {
+		display: none;
+	}
+}
+.ftco-46 .ftco-46-text p:last-child {
+	margin-bottom: 0;
+}
+.btn-link {
+	text-transform: uppercase;
+	font-size: 12px !important;
+	letter-spacing: .15em;
+	text-decoration: none !important;
+	-webkit-transition: .3s all ease;
+	-o-transition: .3s all ease;
+	transition: .3s all ease;
+	color: #000;
+	font-weight: 900;
+}
+.btn-link span {
+	position: relative;
+	margin-left: 0px;
+	-webkit-transition: .3s all ease;
+	-o-transition: .3s all ease;
+	transition: .3s all ease;
+}
+.btn-link:hover, .btn-link:active, .btn-link:focus {
+	color: #000;
+}
+.btn-link:hover span, .btn-link:active span, .btn-link:focus span {
+	color: #000;
+	margin-left: 10px;
+}
+/* --- */
+#img1 {
+	background-image: url("../img/p_kitchen-img1.jpeg");
+}
+#img2 {
+	background-image: url("../img/p_kitchen-img2.jpeg");
+}
+#img3 {
+	background-image: url("../img/p_kitchen-img3.jpeg");
+}
+#img4 {
+	background-image: url("../img/p_kitchen-img4.jpeg");
+}
+#img5 {
+	background-image: url("../img/p_kitchen-img5.jpeg");
+}
+#img6 {
+	background-image: url("../img/p_kitchen-img6.jpeg");
+}

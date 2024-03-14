@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html{
+  scroll-behavior: smooth;
+}
+
+#cover{
+	background-image:url("../img/hp_cover.jpg");
+}
+
+#bg-blog{
+	background-image:url("../img/hp_life_blog.jpg");
+}
+
+#bg-kitchen{
+	background-image:url("../img/hp_kitchen.jpg");
+}
+
+#bg-bean{
+	background-image:url("../img/hp_bean.jpg");
+}
+
+.qinan-portfolio{
+	padding: 0 0 0 2rem;
+	border-left: .5rem solid #64a19d;	
+}
+
+.kexin-portfolio{
+	padding: 0 0 0 2rem;
+	border-right: .5rem solid #64a19d;	
+}

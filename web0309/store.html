@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page | Cama Coffee</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="./images/coffee-cup.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- cdnjs font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- header block -->
+    <header class="header-container clearfix">
+        <h1 class="col-3-header float-left clearfix">
+            <img src="./images/logo.png" class="w-logo float-left" alt="logo">
+            <a href="./index.html" class="float-left">Cama Coffee</a>
+        </h1>
+        <nav class="col-3-header float-left">
+            <ul class="clearfix">
+                <li class="float-left"><a href="about.html">關於我們</a></li>
+                <li class="float-left"><a href="product.html">商品列表</a></li>
+                <li class="float-left"><a href="store.html">門市資訊</a></li>
+                <li class="float-left"><a href="contact.html">聯絡我們</a></li>
+            </ul>
+        </nav>
+        <div class="col-3-header float-left clearfix">
+            <div class="social-icon">
+                <a class="float-left" href="https://www.facebook.com/camacafe/" target="_blank"><i-facebook
+                        class="fa-brands fa-facebook"></i-facebook></a>
+                <a class="float-left" href="https://www.instagram.com/camacafe_tw/" target="_blank"><i-instagram
+                        class="fa-brands fa-instagram"></i-instagram></a>
+                <a class="float-left" href="https://www.youtube.com/channel/UCQQU984-ZStyys9bv9Sh09g"
+                    target="_blank"><i-youtube class="fa-brands fa-youtube"></i-youtube></a>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="bg-light">
+        <div class="container">
+            <ol class="breadcrumb clearfix">
+                <li class="float-left"><a href="index.html">首頁</a></li>
+                <li class="float-left">門市資訊</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- container start -->
+    <!-- .container.clearfix>.float-left.col-3{左}+.float-left.col-9{右} -->
+    <div class="container clearfix position-relative">
+
+        <h2 class="float-left col-12">門市資訊</h2>
+
+        <div class="float-left col-3 position-sticky">
+            <ul class="sidebar">
+                <li><a href="#" class="active">門市資訊</a></li>
+                <li><a href="#">加盟資訊</a></li>
+                <li><a href="#">會員資訊</a></li>
+            </ul>
+        </div>
+
+        <div class="float-left col-9">
+
+            <!-- 篩選區塊 -->
+            <div>以區域選擇</div>
+
+            <select>
+                <option value="">台灣</option>
+            </select>
+
+            <select>
+                <option disabled selected>縣市</option>
+                <option value="368" data-select2-id="11">臺北市</option>
+                <option value="381" data-select2-id="12">基隆市</option>
+                <option value="389" data-select2-id="13">新北市</option>
+                <option value="419" data-select2-id="14">宜蘭縣</option>
+                <option value="433" data-select2-id="15">新竹市</option>
+                <option value="435" data-select2-id="16">新竹縣</option>
+                <option value="449" data-select2-id="17">桃園市</option>
+                <option value="463" data-select2-id="18">苗栗縣</option>
+                <option value="482" data-select2-id="19">臺中市</option>
+                <option value="512" data-select2-id="20">彰化縣</option>
+                <option value="539" data-select2-id="21">南投縣</option>
+                <option value="553" data-select2-id="22">嘉義市</option>
+                <option value="555" data-select2-id="23">嘉義縣</option>
+                <option value="574" data-select2-id="24">雲林縣</option>
+                <option value="595" data-select2-id="25">臺南市</option>
+                <option value="633" data-select2-id="26">高雄市</option>
+                <option value="672" data-select2-id="27">屏東縣</option>
+                <option value="706" data-select2-id="28">花蓮縣</option>
+                <option value="720" data-select2-id="29">臺東縣</option>
+            </select>
+
+            <select>
+                <option>鄉鎮市區</option>
+            </select>
+
+            <select>
+                <option value="0" data-select2-id="9">全部門市</option>
+                <option value="1" data-select2-id="32">經典門市</option>
+                <option value="2" data-select2-id="33">亮點門市</option>
+                <option value="3" data-select2-id="34">旗艦門市</option>
+            </select>
+            <br />
+
+            <div class="table-container overflow-auto">
+                <!-- table>tr*10>td{item$-$}*5 -->
+                <table>
+                    <tr>
+                        <th>門市名稱</th>
+                        <th>地址</th>
+                        <th>電話</th>
+                        <th>撥號</th>
+                        <th>導航</th>
+                    </tr>
+                    <tr>
+                        <td>台北和平店</td>
+                        <td>臺北市大安區和平東路三段6號</td>
+                        <td>(02)2739-0918</td>
+                        <td>
+                            <a href="tel:(02)2739-0918" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=25.024707298644,121.546991215343" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>竹東長春店</td>
+                        <td>新竹縣竹東鎮長春路一段266號</td>
+                        <td>03595-5658</td>
+                        <td>
+                            <a href="tel:03595-5658" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=24.7357160588958,121.089390580162" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>青埔新生店</td>
+                        <td>桃園市大園區新生路四段271號</td>
+                        <td>(03)287-5519</td>
+                        <td>
+                            <a href="tel:(03)287-5519" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=25.008773768529,121.213188937393" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>小港漢民店</td>
+                        <td>高雄市小港區漢民路767號</td>
+                        <td>(07)801-1208</td>
+                        <td>
+                            <a href="tel:(07)801-1208" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=22.5686100080989,120.363909115456" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>台中精明店</td>
+                        <td>臺中市西區精誠路74號</td>
+                        <td>(04)2323-0088</td>
+                        <td>
+                            <a href="tel:(04)2323-0088" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=24.1560016873782,120.6559537" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>台中精明店</td>
+                        <td>臺中市西區精誠路74號</td>
+                        <td>(04)2323-0088</td>
+                        <td>
+                            <a href="tel:(04)2323-0088" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=24.1560016873782,120.6559537" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>台中精明店</td>
+                        <td>臺中市西區精誠路74號</td>
+                        <td>(04)2323-0088</td>
+                        <td>
+                            <a href="tel:(04)2323-0088" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=24.1560016873782,120.6559537" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>台中精明店</td>
+                        <td>臺中市西區精誠路74號</td>
+                        <td>(04)2323-0088</td>
+                        <td>
+                            <a href="tel:(04)2323-0088" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=24.1560016873782,120.6559537" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>台中精明店</td>
+                        <td>臺中市西區精誠路74號</td>
+                        <td>(04)2323-0088</td>
+                        <td>
+                            <a href="tel:(04)2323-0088" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=24.1560016873782,120.6559537" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>台中精明店</td>
+                        <td>臺中市西區精誠路74號</td>
+                        <td>(04)2323-0088</td>
+                        <td>
+                            <a href="tel:(04)2323-0088" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=24.1560016873782,120.6559537" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>台中精明店</td>
+                        <td>臺中市西區精誠路74號</td>
+                        <td>(04)2323-0088</td>
+                        <td>
+                            <a href="tel:(04)2323-0088" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=24.1560016873782,120.6559537" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>台中精明店</td>
+                        <td>臺中市西區精誠路74號</td>
+                        <td>(04)2323-0088</td>
+                        <td>
+                            <a href="tel:(04)2323-0088" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=24.1560016873782,120.6559537" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>台中精明店</td>
+                        <td>臺中市西區精誠路74號</td>
+                        <td>(04)2323-0088</td>
+                        <td>
+                            <a href="tel:(04)2323-0088" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=24.1560016873782,120.6559537" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>台中精明店</td>
+                        <td>臺中市西區精誠路74號</td>
+                        <td>(04)2323-0088</td>
+                        <td>
+                            <a href="tel:(04)2323-0088" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=24.1560016873782,120.6559537" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>台中精明店</td>
+                        <td>臺中市西區精誠路74號</td>
+                        <td>(04)2323-0088</td>
+                        <td>
+                            <a href="tel:(04)2323-0088" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=24.1560016873782,120.6559537" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>台中精明店</td>
+                        <td>臺中市西區精誠路74號</td>
+                        <td>(04)2323-0088</td>
+                        <td>
+                            <a href="tel:(04)2323-0088" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=24.1560016873782,120.6559537" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>台中精明店</td>
+                        <td>臺中市西區精誠路74號</td>
+                        <td>(04)2323-0088</td>
+                        <td>
+                            <a href="tel:(04)2323-0088" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=24.1560016873782,120.6559537" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>台中精明店</td>
+                        <td>臺中市西區精誠路74號</td>
+                        <td>(04)2323-0088</td>
+                        <td>
+                            <a href="tel:(04)2323-0088" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=24.1560016873782,120.6559537" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>台中精明店</td>
+                        <td>臺中市西區精誠路74號</td>
+                        <td>(04)2323-0088</td>
+                        <td>
+                            <a href="tel:(04)2323-0088" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=24.1560016873782,120.6559537" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>台中精明店</td>
+                        <td>臺中市西區精誠路74號</td>
+                        <td>(04)2323-0088</td>
+                        <td>
+                            <a href="tel:(04)2323-0088" target="_top"><i class="fa-solid fa-phone"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.google.com/maps?q=24.1560016873782,120.6559537" target="_blank"><i
+                                    class="fa-solid fa-map"></i></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <!-- container end -->
+
+    <!-- pagetop btn -->
+    <a href="#" id="pagetop">TOP</a>
+
+    <!-- footer block -->
+    <footer>
+        <div class="container">
+            <p>
+                網站僅供練習，不作為商業用途<br>
+                copyright &copy &nbsp; Cama Coffee. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        div[class^="col"]:nth-child(odd) {
+            background-color: lightgreen;
+        }
+
+        div[class^="col"]:nth-child(even) {
+            background-color: lightpink;
+        }
+
+        div[class^="col"] {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h4>Bootstrap Grids</h4>
+    <p><a
+            href="https://www.w3schools.com/bootstrap5/bootstrap_grid_basic.php">https://www.w3schools.com/bootstrap5/bootstrap_grid_basic.php</a>
+    </p>
+    <h4>Bootstrap Grid Examples</h4>
+    <p><a
+            href="https://www.w3schools.com/bootstrap5/bootstrap_grid_examples.php">https://www.w3schools.com/bootstrap5/bootstrap_grid_examples.php</a>
+    </p>
+    <h4>Grid options</h4>
+    <p><a
+            href="https://getbootstrap.com/docs/5.2/layout/grid/#grid-options">https://getbootstrap.com/docs/5.2/layout/grid/#grid-options</a>
+    </p>
+
+    <h4>Row columns</h4>
+    <p><a
+            href="https://getbootstrap.com/docs/5.2/layout/grid/#row-columns">https://getbootstrap.com/docs/5.2/layout/grid/#row-columns</a>
+    </p>
+    <h4>Nesting</h4>
+    <p><a
+            href="https://getbootstrap.com/docs/5.2/layout/grid/#nesting">https://getbootstrap.com/docs/5.2/layout/grid/#nesting</a>
+    </p>
+    <hr>
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid mt-3">
+        <h2>Three Equal Columns</h2>
+        <p>Use the .col class on a specified number of elements and Bootstrap will recognize how many elements there are
+            (and create equal-width columns). In the example below, we use three col elements, which gets a width of
+            33.33% each.</p>
+        <div class="row">
+            <div class="col bg-success">.col</div>
+            <div class="col bg-warning">.col</div>
+            <div class="col bg-success">.col</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid mt-3">
+        <h2>Three Equal Columns</h2>
+        <p>You can also use numbers to control the column width. Just make sure that the sum always adds up to 12:</p>
+        <div class="row">
+            <div class="col-4 bg-success">.col-4</div>
+            <div class="col-4 bg-warning">.col-4</div>
+            <div class="col-4 bg-success">.col-4</div>
+            <div class="col-4 bg-success">.col-4</div>
+            <div class="col-4 bg-success">.col-4</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid mt-3">
+        <h2>Three Unequal Columns</h2>
+        <p>To create unequal columns, you have to use numbers. The following example will create a 25%/50%/25% split:
+        </p>
+        <div class="row">
+            <div class="col-3 bg-success">.col-3</div>
+            <div class="col-6 bg-warning">.col-6</div>
+            <div class="col-3 bg-success">.col-3</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid mt-3">
+        <h1>Three equal width columns</h1>
+        <p>Note: Try to add a new div with class="col" inside the row class - this will create four equal-width columns.
+        </p>
+        <div class="row">
+            <!-- 平分12欄位的空間 -->
+            <div class="col text-black">.col</div>
+            <div class="col text-black">.col</div>
+            <div class="col text-black">.col</div>
+            <div class="col text-black">.col</div>
+            <div class="col text-black">.col</div>
+            <div class="col text-black">.col</div>
+            <div class="col text-black">.col</div>
+            <div class="col text-black">.col</div>
+            <div class="col text-black">.col</div>
+            <div class="col text-black">.col</div>
+            <div class="col text-black">.col</div>
+            <div class="col text-black">.col</div>
+            <div class="col text-black">.col</div>
+            <div class="col text-black">.col</div>
+            <div class="col text-black">.col</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid mt-3">
+        <h1>Four equal width columns</h1>
+        <p>Note: Try to add a new div with class="col" inside the row class - this will create four equal-width columns.
+        </p>
+        <div class="row">
+            <div class="col text-black">.col</div>
+            <div class="col text-black">.col</div>
+            <div class="col text-black">.col</div>
+            <div class="col text-black">.col</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid mt-3">
+        <h1>Responsive Columns</h1>
+        <p>Resize the browser window to see the effect.</p>
+        <p>The columns will automatically stack on top of each other when the screen is less than 576px wide.</p>
+        <div class="row">
+            <div class="col-sm-3 p-3 bg-primary text-white">.col</div>
+            <div class="col-sm-3 p-3 bg-dark text-white">.col</div>
+            <div class="col-sm-3 p-3 bg-primary text-white">.col</div>
+            <div class="col-sm-3 p-3 bg-dark text-white">.col</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid mt-3">
+        <h2>More Equal Columns</h2>
+        <div class="row">
+            <div class="col">1 of 2</div>
+            <div class="col">2 of 2</div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">1 of 4</div>
+            <div class="col">2 of 4</div>
+            <div class="col">3 of 4</div>
+            <div class="col">4 of 4</div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">1 of 6</div>
+            <div class="col">2 of 6</div>
+            <div class="col">3 of 6</div>
+            <div class="col">4 of 6</div>
+            <div class="col">5 of 6</div>
+            <div class="col">6 of 6</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>.col-{數字} 超出12等分</h3>
+    <div class="row">
+        <div class="col-5">col-5</div>
+        <div class="col-8">col-8</div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid mt-3">
+        <h2>Row Cols</h2>
+        <p>The .row-cols-* classes are used to set the number of columns that should appear next to each other.</p>
+
+        <div class="row row-cols-1">
+            <div class="col bg-success">1 of 2</div>
+            <div class="col bg-warning">2 of 2</div>
+        </div>
+        <br>
+        <div class="row row-cols-2">
+            <div class="col bg-success">1 of 4</div>
+            <div class="col bg-warning">2 of 4</div>
+            <div class="col bg-success">3 of 4</div>
+            <div class="col bg-warning">4 of 4</div>
+        </div>
+        <br>
+        <div class="row row-cols-3">
+            <div class="col bg-success">1 of 6</div>
+            <div class="col bg-warning">2 of 6</div>
+            <div class="col bg-success">3 of 6</div>
+            <div class="col bg-warning">4 of 6</div>
+            <div class="col bg-success">5 of 6</div>
+            <div class="col bg-warning">6 of 6</div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container-fluid mt-3">
+        <h2>Nested Columns</h2>
+        <p>Add columns inside other columns:</p>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8 bg-warning p-4">
+                .col-8
+                <div class="row">
+                    <div class="col-6 bg-light p-2">.col-6</div>
+                    <div class="col-6 bg-secondary p-2">.col-6</div>
+                </div>
+            </div>
+            <div class="col-4 bg-success p-4">.col-4</div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- 10. 請試著透過 col-* 或者 row-cols-* 的設定，將畫面平分成四欄 -->
+    <!-- .col-{斷點}-{數字} -->
+    <div class="container-fluid mt-3">
+        <h1>請試著透過 col-* 或者 row-cols-* 的設定，將畫面平分成四欄</h1>
+        <div class="row">
+            <div class="col-3">col-3</div>
+            <div class="col-3">col-3</div>
+            <div class="col-3">col-3</div>
+            <div class="col-3">col-3</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- 20. 請試著透過 col-斷點-* 的設定當瀏覽器寬度 ≥768px 時，將畫面平分成兩欄 -->
+    <div class="container-fluid mt-3">
+        <h1>請試著透過 col-斷點-* 的設定當瀏覽器寬度 ≥768px 時，將畫面平分成兩欄</h1>
+        <div class="row">
+            <div class="col-md-6">col-md-6</div>
+            <div class="col-md-6">col-md-6</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- 21. 請試著透過 col-斷點-* 的設定當瀏覽器寬度 ≥576px 時，將畫面平分成四欄 -->
+    <div class="container-fluid mt-3">
+        <h1>請試著透過 col-斷點-* 的設定當瀏覽器寬度 ≥576px 時，將畫面平分成四欄</h1>
+        <div class="row">
+            <div class="col-sm-3">col-sm-3</div>
+            <div class="col-sm-3">col-sm-3</div>
+            <div class="col-sm-3">col-sm-3</div>
+            <div class="col-sm-3">col-sm-3</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- 22. 請試著透過 col-斷點-* 的設定當瀏覽器寬度 ≥992px 時，將畫面平分成四欄 -->
+    <div class="container-fluid mt-3">
+        <h1>請試著透過 col-斷點-* 的設定當瀏覽器寬度 ≥992px 時，將畫面平分成四欄</h1>
+        <div class="row">
+            <div class="col-lg-3">col-lg-3</div>
+            <div class="col-lg-3">col-lg-3</div>
+            <div class="col-lg-3">col-lg-3</div>
+            <div class="col-lg-3">col-lg-3</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- 23. 請試著透過 col-斷點-* 的設定當瀏覽器寬度 ≥992px 時，將畫面平分成四欄 -->
+    <div class="container-fluid mt-3">
+        <h1>請試著透過 col-斷點-* 的設定當瀏覽器寬度 ≥992px 時，將畫面平分成四欄</h1>
+        <div class="row">
+            <div class="col-md-6 col-lg-3">col-lg-3</div>
+            <div class="col-md-6 col-lg-3">col-lg-3</div>
+            <div class="col-md-6 col-lg-3">col-lg-3</div>
+            <div class="col-md-6 col-lg-3">col-lg-3</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- 30. 觀察現有的網頁，進行巢狀堆疊Grid的練習 -->
+    <div class="container-fluid mt-3">
+        <h2>Nested Columns</h2>
+        <p>Add columns inside other columns:</p>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4 bg-warning">
+                <div class="text-center">
+                    <img src="https://placehold.co/300x300" class="rounded img-fluid" alt="...">
+                </div>
+            </div>
+            <div class="col-4 bg-success">
+                <div class="text-center">
+                    <img src="https://placehold.co/300x300" class="rounded img-fluid" alt="...">
+                </div>
+            </div>
+            <div class="col-4 bg-warning">
+                <div class="row">
+                    <div class="col-12 bg-light">
+                        <div class="text-center">
+                            <img src="https://placehold.co/300x150" class="rounded" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-12 bg-secondary">
+                        <div class="text-center">
+                            <img src="https://placehold.co/300x150" class="rounded" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container-fluid mt-3">
+        <h2>Nested Columns</h2>
+        <p>Add columns inside other columns:</p>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 bg-warning">
+                <div class="row">
+                    <div class="col-12 bg-light">
+                        <div class="text-center">
+                            <img src="https://placehold.co/300x150" class="rounded" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-12 bg-secondary">
+                        <div class="text-center">
+                            <img src="https://placehold.co/300x150" class="rounded" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 bg-success">
+                <div class="row">
+                    <div class="col-12 bg-secondary">
+                        <div class="text-center">
+                            <img src="https://placehold.co/300x150" class="rounded" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-12 bg-light">
+                        <div class="text-center">
+                            <img src="https://placehold.co/300x150" class="rounded" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 bg-warning">
+                <div class="row">
+                    <div class="col-12 bg-light">
+                        <div class="text-center">
+                            <img src="https://placehold.co/300x150" class="rounded" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-12 bg-secondary">
+                        <div class="text-center">
+                            <img src="https://placehold.co/300x150" class="rounded" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 bg-success">
+                col-3
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+
+</html>

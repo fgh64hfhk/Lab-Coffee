@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html{
+	scroll-behavior: smooth;
+}
+
+a{
+	color: #000000;
+}
