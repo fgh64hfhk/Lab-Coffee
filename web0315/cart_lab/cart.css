@@ -1,0 +1,94 @@
+/* google font - poppins */
+@import url();
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    width: 900px;
+    min-width: 90vw;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+header .icon-cart{
+    position: relative;
+}
+
+header .icon-cart svg {}
+
+header .icon-cart span {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    right: -20px;
+}
+
+.listProduct {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap:20px;
+
+}
+
+.listProduct .item{
+    background-color: #eeeee6;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+
+.listProduct .item img {
+    width: 80%;
+    filter: drop-shadow(0 50px 20px #0009);
+}
+
+.listProduct .item h2{
+    font-weight: 500;
+    font-size: large;
+}
+
+.listProduct .item .price{
+    letter-spacing: 7px;
+    font-size: small;
+}
+
+.listProduct .item button{
+    background-color: #353432;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.cartTab {
+    width: 400px;
+    background-color: lightblue;
+    color: black;
+    position: fixed;
+    inset: 0 0 0 auto;
+}
