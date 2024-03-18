@@ -13,6 +13,10 @@ const loadTemplate = () => {
             app.innerHTML = html;
             let contentTab = document.getElementById('contentTab');
             console.log("contentTab:", contentTab);
+            console.log("contentTab.innerHTML:", contentTab.innerHTML);
+            console.log("temporaryContent:", temporaryContent);
+            console.log("temporaryContent.innerHTML:", temporaryContent.innerHTML);
+
             contentTab.innerHTML = temporaryContent.innerHTML;
             temporaryContent.innerHTML = null;
             cart();

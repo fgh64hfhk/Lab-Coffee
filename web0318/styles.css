@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+* {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+    /* font-size: 25px; */
+    /* font-weight: 500; */
+}
+body {
+    font-family: "Poppins", sans-serif;
+    padding: 5px;
+    background-color: lightgray;
+}
+
+.container {
+    width: 900px;
+    margin: auto;
+    max-width: 90vw;
+    text-align: center;
+    padding-top: 10px;
+    transition: .5s ease;
+}
+.container header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.container header .title {
+    font-size: xx-large;
+    font-weight: 500;
+}
+.container header .icon-cart {
+    position: relative;
+}
+.container header .icon-cart:hover {
+    color: lightyellow;
+}
+.container header .icon-cart svg {
+    width: 40px;
+}
+.container header .icon-cart span {
+    position: absolute;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    top: 50%;
+    right: -20px;
+}
+
+.cartTab {
+    width: 400px;
+    max-width: 100%;
+    background-color: grey;
+    color: whitesmoke;
+    position: fixed;
+    inset: 0 0 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+}
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 600;
+}
+.cartTab .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartTab button {
+    background-color: lightgoldenrodyellow;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cartTab .close {
+    background-color: whitesmoke;
+}
+
+.cartTab .listCart {
+    overflow: auto;
+}
+.cartTab .listCart::-webkit-scrollbar {
+    width: 0;
+}
+
+/* 隱藏購物車樣板 */
+.cartTab {
+    right: -400px;
+    transition: .5s ease;
+}
+body.activeTabCart .cartTab {
+    right: 0;
+}
+body.activeTabCart .container {
+    transform: translateX(-250px);
+}
