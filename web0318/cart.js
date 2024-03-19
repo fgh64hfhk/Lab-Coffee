@@ -1,84 +1,43 @@
 import products from "./products.js";
 const cart = () => {
 
-    // open and close cart tab
-    let bodyHTML = document.querySelector('body');
+    let listCartHTML = document.querySelector('.listCart');
+
     let iconCart = document.querySelector('.icon-cart');
-    let closeBtn = document.querySelector('.close');
+
+    let iconCartSpan = iconCart.querySelector('span');
+
+    let body = document.querySelector('body');
+
+    let closeCart = document.querySelector('.close');
+
+    let cart = [];
+
+    // open and close tab
     iconCart.addEventListener('click', () => {
-        bodyHTML.classList.toggle('activeTabCart');
-    });
-    closeBtn.addEventListener('click', () => {
-        bodyHTML.classList.toggle('activeTabCart');
-    });
-
-    // set click event configuration
-
-    document.addEventListener('click', (event) => {
-
-        let event_target = event.target;
-
-        let body_status = bodyHTML.classList.value;
-
-        let product_id = event_target.dataset.id;
-
-        let product_index = cart.findIndex((value) => {
-            value.product_id == product_id;
-        });
-
-        let quantity = null;
-
-        switch (true) {
-            case (event_target.classList.contains('addCart')):
-                quantity = (product_index < 0) ? 1 : cart[product_index].quantity + 1;
-                addProductsToCart(product_id, quantity);
-                break;
-            case (event_target.classList.contains('minus')):
-                quantity = cart[product_index].quantity - 1;
-                addProductsToCart(product_id, quantity);
-                break;
-            case (event_target.classList.contains('plus')):
-                quantity = cart[product_index].quantity + 1;
-                addProductsToCart(product_id, quantity);
-                break;
-            case (event_target.id == 'app'):
-                if (body_status === 'activeTabCart') {
-                    bodyHTML.classList.toggle('activeTabCart');
-                }
-                break;
-            default:
-                break;
-        }
-        console.log("cart:", cart);
-        // addCartToHTML();
+        body.classList.toggle('activeTabCart');
+    })
+    closeCart.addEventListener('click', () => {
+        body.classList.toggle('activeTabCart');
     })
 
-    // add products to cart func
-    let cart = [];
-    const addProductsToCart = (product_id, qty) => {
-        let product_index = cart.findIndex((value) => {
-            value.product_id == product_id;
-        });
-        if (qty <= 0) {
-            cart.splice(product_index, 1);
-        } else if (product_index < 0) {
-            // not yet in cart
+    const setProductInCart = (idProduct, value) => {
+        let positionThisProductInCart = cart.findIndex((value) => value.product_id == idProduct);
+        if (value <= 0) {
+            cart.splice(positionThisProductInCart, 1);
+        } else if (positionThisProductInCart < 0) {
             cart.push({
-                id: product_id,
+                product_id: idProduct,
                 quantity: 1
             });
         } else {
-            cart[product_index].quantity = qty;
+            cart[positionThisProductInCart].quantity = value;
         }
-        localStorage.setItem('cart', JSON.stringify(cart));
-        console.log("Local Storage:", localStorage.getItem('cart'));
+        localStorage.setItem('cart_new', JSON.stringify(cart));
+        addCartToHTML();
     }
-    // add cart in memory to HTML
+
     const addCartToHTML = () => {
-        let iconCartSpan = iconCart.querySelector('span');
-        // console.log("span:", iconCartSpan);
-        let listCartHTML = document.querySelector('.listCart');
-        // console.log("list cart HTML:", listCartHTML);
         listCartHTML.innerHTML = '';
         let totalQuantity = 0;
         if (cart.length > 0) {
@@ -88,19 +47,19 @@ const cart = () => {
                 newItem.classList.add('item');
                 newItem.dataset.id = item.product_id;
 
-                let product_index = products.findIndex((value) => value.id == item.product_id);
+                let positionProduct = products.findIndex((value) => value.id == item.product_id);
 
-                let item_info = products[product_index];
+                let info = products[positionProduct];
 
                 listCartHTML.appendChild(newItem);
                 newItem.innerHTML = `
                 <div class="image">
-                    <img src="${item_info.image}" alt="${item_info.name}">
+                    <img src="${info.image}" alt="${info.name}">
                 </div>
-                <div class="name">${item_info.name}</div>
-                <div class="totalPrice">${item_info.price * item.quantity}</div>
+                <div class="name">${info.name}</div>
+                <div class="totalPrice">$${info.price * item.quantity}</div>
                 <div class="quantity">
-                    <span class="minus" data-id="${item_info.id}">
+                    <span class="minus" data-id="${info.id}">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                             class="bi bi-dash-circle" viewBox="0 0 16 16">
                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
@@ -108,7 +67,7 @@ const cart = () => {
                         </svg>
                     </span>
                     <span class="qty">${item.quantity}</span>
-                    <span class="plus" data-id="${item_info.id}">
+                    <span class="plus" data-id="${info.id}">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                             class="bi bi-plus-circle" viewBox="0 0 16 16">
                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
@@ -116,9 +75,7 @@ const cart = () => {
                                 d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
                         </svg>
                     </span>
-                </div>
-                <div class="cancel">
-                    <span>
+                    <span class="cancel" data-id="${info.id}">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-circle"
                             viewBox="0 0 16 16">
                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
@@ -132,5 +89,77 @@ const cart = () => {
         }
         iconCartSpan.innerText = totalQuantity;
     }
+
+    document.addEventListener('click', (event) => {
+        let buttonClick = event.target;
+        let idProduct = buttonClick.dataset.id;
+        // console.log("idProduct:", idProduct);
+        let quantity = null;
+        let positionProductInCart = cart.findIndex((value) => value.product_id == idProduct);
+        // console.log("posi:", positionProductInCart);
+
+        switch (true) {
+            case (buttonClick.classList.contains('addCart')):
+                quantity = (positionProductInCart < 0) ? 1 : cart[positionProductInCart].quantity + 1;
+                setProductInCart(idProduct, quantity);
+                break;
+            default:
+                if (buttonClick.classList) {
+                    let target = buttonClick; // 创建一个新的变量来保存目标元素
+                    while (target && !target.classList.contains('minus')) {
+                        target = target.parentNode;
+                        if (target.classList.contains('minus')) {
+                            let product_id = target.dataset.id;
+                            // console.log(product_id);
+                            let product_index = cart.findIndex((value) => value.product_id == product_id);
+                            // console.log(product_index);
+                            if (product_index >= 0 && cart[product_index]) {
+                                quantity = cart[product_index].quantity - 1;
+                                setProductInCart(product_id, quantity);
+                            } else {
+                                console.error('Product not found in cart or cart is not properly initialized.');
+                            }
+                            break;
+                        } else if (target.classList.contains('plus')) {
+                            let product_id = target.dataset.id;
+                            // console.log(product_id);
+                            let product_index = cart.findIndex((value) => value.product_id == product_id);
+                            // console.log(product_index);
+                            if (product_index >= 0 && cart[product_index]) {
+                                quantity = cart[product_index].quantity + 1;
+                                setProductInCart(product_id, quantity);
+                            } else {
+                                console.error('Product not found in cart or cart is not properly initialized.');
+                            }
+                            break;
+                        } else if (target.classList.contains('cancel')) {
+                            alert('please make sure to delete item.');
+                            let product_id = target.dataset.id;
+                            // console.log(product_id);
+                            let product_index = cart.findIndex((value) => value.product_id == product_id);
+                            // console.log(product_index);
+                            if (product_index >= 0 && cart[product_index]) {
+                                quantity = 0;
+                                setProductInCart(product_id, quantity);
+                            } else {
+                                console.error('Product not found in cart or cart is not properly initialized.');
+                            }
+                            break;
+                        } else if (target.id == 'app') {
+                            break; // 如果 target 为 null，则跳出循环
+                        }
+                    }
+                }
+                break;
+        }
+    })
+
+    const initApp = () => {
+        // localStorage.removeItem('cart_new');
+        if (localStorage.getItem('cart_new')) {
+            cart = JSON.parse(localStorage.getItem('cart'));
+        }
+    }
+    initApp();
 }
 export default cart;
