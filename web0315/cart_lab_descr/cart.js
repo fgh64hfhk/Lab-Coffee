@@ -35,14 +35,17 @@ const cart = () => {
         listCartHTML.innerHTML = '';
         let totalQuantity = 0;
         if (cart.length > 0) {
+            console.log("cart:", cart);
             cart.forEach(item => {
                 totalQuantity = totalQuantity + item.quantity;
                 let newItem = document.createElement('div');
                 newItem.classList.add('item');
                 newItem.dataset.id = item.product_id;
-
+                console.log("products:", products);
                 let positionProduct = products.findIndex((value) => value.id == item.product_id);
+                // console.log("positionProduct:", positionProduct);
                 let info = products[positionProduct];
+                // console.log("info:", info);
                 listCartHTML.appendChild(newItem);
                 newItem.innerHTML = `
                 <div class="image">
@@ -87,11 +90,12 @@ const cart = () => {
     })
 
     const initApp = () => {
-
+        // localStorage.removeItem('cart');
         if (localStorage.getItem('cart')) {
             cart = JSON.parse(localStorage.getItem('cart'));
             addCartToHTML();
         }
+
     }
     initApp();
 }

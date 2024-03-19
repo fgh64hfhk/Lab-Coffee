@@ -9,13 +9,14 @@ const loadTemplate = () => {
     fetch('./template.html')
         .then(response => response.text())
         .then(html => {
-            console.log("html:", html);
+            // console.log("html:", html);
             app.innerHTML = html;
             let contentTab = document.getElementById('contentTab');
-            console.log("contentTab:", contentTab);
-            console.log("contentTab.innerHTML:", contentTab.innerHTML);
-            console.log("temporaryContent:", temporaryContent);
-            console.log("temporaryContent.innerHTML:", temporaryContent.innerHTML);
+
+            // console.log("contentTab:", contentTab);
+            // console.log("contentTab.innerHTML:", contentTab.innerHTML);
+            // console.log("temporaryContent:", temporaryContent);
+            // console.log("temporaryContent.innerHTML:", temporaryContent.innerHTML);
 
             contentTab.innerHTML = temporaryContent.innerHTML;
             temporaryContent.innerHTML = null;
