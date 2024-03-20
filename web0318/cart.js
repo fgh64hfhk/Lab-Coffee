@@ -106,7 +106,8 @@ const cart = () => {
             default:
                 if (buttonClick.classList) {
                     let target = buttonClick; // 创建一个新的变量来保存目标元素
-                    while (target && !target.classList.contains('minus')) {
+                    while (target && target !== null) {
+                        console.log(target); //<!DOCTYPE html>
                         target = target.parentNode;
                         if (target.classList.contains('minus')) {
                             let product_id = target.dataset.id;
@@ -145,8 +146,7 @@ const cart = () => {
                                 console.error('Product not found in cart or cart is not properly initialized.');
                             }
                             break;
-                        } else if (target.id == 'app') {
-                            break; // 如果 target 为 null，则跳出循环
+
                         }
                     }
                 }
@@ -157,7 +157,8 @@ const cart = () => {
     const initApp = () => {
         // localStorage.removeItem('cart_new');
         if (localStorage.getItem('cart_new')) {
-            cart = JSON.parse(localStorage.getItem('cart'));
+            cart = JSON.parse(localStorage.getItem('cart_new'));
+            addCartToHTML();
         }
     }
     initApp();

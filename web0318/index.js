@@ -19,7 +19,7 @@ const loadTemplate = () => {
 
             if (temporaryContent) {
                 contentTab.innerHTML = temporaryContent.innerHTML;
-                temporaryContent.innerHTML = ''; // Clear temporary content
+                temporaryContent.innerHTML = null; // Clear temporary content
             } else {
                 console.error("temporaryContent 元素不存在！");
             }
@@ -37,7 +37,7 @@ loadTemplate();
 const initApp = () => {
     // load list product
     let listProductHTML = document.querySelector('.listProduct');
-    listProductHTML.innerHTML = ''; // Clear list before populating
+    listProductHTML.innerHTML = null; // Clear list before populating
     // forEach products json
     products.forEach(product => {
         let newProduct = document.createElement('div');
@@ -50,7 +50,7 @@ const initApp = () => {
             <div class="price">$${product.price}</div>
             <span>-10%</span>
             <button class="addCart" data-id='${product.id}'>
-                Add To Cart
+                ADD TO CART
             </button>
         `;
         listProductHTML.appendChild(newProduct);
